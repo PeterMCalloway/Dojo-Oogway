@@ -3,18 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dojo Oogway - Tactiques</title>
+    <title>Dojo Oogway</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
         <ul>
+            <li><a href="#" onclick="showSection('accueil')">Accueil</a></li>
+            <li><a href="#" onclick="showSection('review')">Review</a></li>
             <li><a href="#" onclick="showSection('tactiques')">Tactiques</a></li>
+            <li><a href="#" onclick="showSection('journal')">Journal</a></li>
+            <li><a href="#" onclick="showSection('progression')">Progression</a></li>
+            <li><a href="#" onclick="showSection('galerie')">Galerie</a></li>
         </ul>
     </nav>
 
     <main>
-        <section id="tactiques" class="section active">
+        <section id="accueil" class="section active">
+            <h1>Bienvenue dans ton Dojo numérique</h1>
+            <p>Un espace pour suivre ton évolution, tes réflexions et tes défis personnels.</p>
+        </section>
+
+        <section id="review" class="section">
+            <h1>Review de Parties</h1>
+            <textarea id="reviewNotes" placeholder="Tes retours ici..."></textarea>
+            <button onclick="saveNote('reviewNotes')">💾 Sauvegarder</button>
+        </section>
+
+        <section id="tactiques" class="section">
             <h1>Tactiques - Maps</h1>
             <div class="map-grid">
                 <button class="map-btn" onclick="toggleMap('cursed')">🗺️ Cursed Hollow</button>
@@ -31,6 +47,43 @@
                     <li><strong>💚 Healer :</strong> Rehgar, Anduin, Brightwing</li>
                     <li><strong>🔄 Flex/Globals :</strong> Dehaka, Falstad, Brightwing</li>
                 </ul>
+            </div>
+        </section>
+
+        <section id="journal" class="section">
+            <h1>Journal de Défis</h1>
+            <input type="text" id="defiInput" placeholder="Ex : Gagner 10 parties avec Falstad">
+            <button onclick="ajouterDefi()">➕ Ajouter</button>
+            <ul id="listeDefis"></ul>
+        </section>
+
+        <section id="progression" class="section">
+            <h1>Tableau de Progression</h1>
+            <table id="progressTable">
+                <thead>
+                    <tr>
+                        <th>Héros</th><th>Rôle</th><th>Map</th><th>Résultat</th><th>Note</th><th>À améliorer</th>
+                    </tr>
+                </thead>
+                <tbody id="progressBody"></tbody>
+            </table>
+            <div class="progress-form">
+                <input placeholder="Héros" id="hero">
+                <input placeholder="Rôle" id="role">
+                <input placeholder="Map" id="map">
+                <input placeholder="Résultat" id="result">
+                <input placeholder="Note" id="note">
+                <input placeholder="À améliorer" id="improve">
+                <button onclick="ajouterProgression()">➕ Ajouter ligne</button>
+            </div>
+        </section>
+
+        <section id="galerie" class="section">
+            <h1>Galerie de Héros</h1>
+            <div class="gallery">
+                <div class="card" onclick="alert('Muradin : tank solide avec stun et sustain')">🛡️ Muradin</div>
+                <div class="card" onclick="alert('Junkrat : zoner chaotique et imprévisible')">💣 Junkrat</div>
+                <div class="card" onclick="alert('Falstad : assassin mobile avec contrôle de carte')">🦅 Falstad</div>
             </div>
         </section>
     </main>
