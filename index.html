@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Oogway</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" onclick="showSection('accueil')">Accueil</a></li>
+            <li><a href="#" onclick="showSection('review')">Review</a></li>
+            <li><a href="#" onclick="showSection('tactiques')">Tactiques</a></li>
+            <li><a href="#" onclick="showSection('plaisirs')">Plaisirs</a></li>
+            <li><a href="#" onclick="showSection('ameliorations')">Axes d'amélioration</a></li>
+            <li><a href="#" onclick="showSection('projets')">Projets</a></li>
+            <li><a href="#" onclick="showSection('envies')">Envies</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="accueil" class="section active">
+            <h1>Bienvenue sur ton Dojo Oogway</h1>
+            <p>Ici commence ton espace de progression, de tactique, et d'inspiration.</p>
+        </section>
+
+        <section id="review" class="section">
+            <h1>Review de Parties</h1>
+            <p>Ajoute ici tes résumés de parties, points positifs et axes d'amélioration.</p>
+        </section>
+
+        <section id="tactiques" class="section">
+            <h1>Tactiques</h1>
+            <p>Compile ici toutes tes stratégies, idées de compositions et adaptations.</p>
+        </section>
+
+        <section id="plaisirs" class="section">
+            <h1>Plaisirs & Motivations</h1>
+            <p>Note ce qui te donne envie de jouer, tes moments préférés, ton moteur interne.</p>
+        </section>
+
+        <section id="ameliorations" class="section">
+            <h1>Axes d'Amélioration</h1>
+            <p>Liste ici ce que tu travailles techniquement, mentalement et stratégiquement.</p>
+        </section>
+
+        <section id="projets" class="section">
+            <h1>Projets Personnels</h1>
+            <p>Décris ici tes défis personnels, tes objectifs de saison, ou tes nouveaux héros à tester.</p>
+        </section>
+
+        <section id="envies" class="section">
+            <h1>Envies Futures</h1>
+            <p>Rêve ici aux styles de jeu, héros ou approches que tu aimerais explorer à l'avenir.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
